@@ -1,27 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarefas</title>
-    
-     <link rel="stylesheet" href="style2.css">
+    <title>Cadastro de Usuários</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-
-    <label for="toggler" class="fas fa-bars"></label>
-
     <a href="#" class="logo">Gerenciamento de tarefas<span>.</span></a>
 
     <nav class="navbar">
-        <a href="#home">Cadastro de Usuários </a>
-        <a href="#products">Cadastro de Tarefas </a>
-        <a href="#review">Gerenciamento de Tarefas </a>
+        <a href="./index.html">Cadastro de Usuários </a>
+        <a href="./index2.html">Cadastro de Tarefas </a>
+        <a href="./index3.html">Gerenciamento de Tarefas </a>
     </nav>
 </header>
-<br>      
-<main>
 
+<div>
+    <h2>Cadastro de Usuários</h2>
+</div>      
+
+<main>
+    <div class="formulario-container">
+        <form>
+            <label for="leitor">Nome</label><br>
+            <input type="text" id="leitor" placeholder="Nome do Cliente" required><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email" placeholder="Email do Cliente" required><br>
+
+            <select id="usuario" required>
+                <option value="">Usuario</option>
+                <option value="joao">Joao</option>
+                <option value="cristina">Cristina</option>
+            </select><br><br>
+
+            <select id="propriedade" required>
+                <option value="">Propriedade</option>
+                <option value="baixa">Baixa</option>
+                <option value="alta">Alta</option>
+            </select><br><br>
+
+            <button type="button" onclick="window.location.href='./index2.html'">Cadastrar</button>
+        </form>
+    </div>
 </main>
+
+<script src="./script.js"></script>
+</body>
+</html>

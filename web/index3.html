@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Gerenciamento de Tarefas</title>
+<link rel="stylesheet" href="style3.css">
+</head>
+<body>
+<header>
+  <h1>Gerenciamento de Tarefas</h1>
+  <nav class="menu" aria-label="Menu principal">
+    <a href="#" tabindex="0">Cadastro de Usuários</a>
+    <a href="#" tabindex="0">Cadastro de Tarefas</a>
+    <a href="#" tabindex="0">Gerenciar Tarefas</a>
+  </nav>
+</header>
+
+<main class="container" role="main" aria-labelledby="main-title">
+  <h2 id="main-title">Tarefas</h2>
+  <div class="task-columns">
+    
+    <section aria-labelledby="to-do-title" class="task-column" >
+      <h3 id="to-do-title" class="task-column-title">A Fazer</h3>
+      <article class="task-card" tabindex="0" aria-label="Tarefa de alta prioridade a fazer">
+        <div class="task-info"><strong>Descrição:</strong> Descrição da tarefa de Alta Prioridade</div>
+        <div class="task-info"><strong>Setor:</strong> Setor Y</div>
+        <div class="task-info"><strong>Prioridade:</strong> Alta</div>
+        <div class="task-info"><strong>Vinculado a:</strong> Usuário A</div>
+        <div class="task-actions">
+          <button type="button" class="action-btn edit" aria-label="Editar tarefa"><span class="material-icons" aria-hidden="true">edit</span>Editar</button>
+          <button type="button" class="action-btn delete" aria-label="Excluir tarefa"><span class="material-icons" aria-hidden="true">delete</span>Excluir</button>
+        </div>
+        <form aria-label="Alterar status da tarefa">
+          <fieldset class="status-radio-group">
+            <legend class="sr-only">Status da tarefa</legend>
+            <label><input type="radio" name="status1" value="a-fazer" checked> A fazer</label>
+            <label><input type="radio" name="status1" value="fazendo"> Fazendo</label>
+            <label><input type="radio" name="status1" value="pronto"> Pronto</label>
+          </fieldset>
+          <button type="submit" class="change-status-btn">Alterar Status</button>
+        </form>
+      </article>
+    </section>
+
+    <section aria-labelledby="in-progress-title" class="task-column" >
+      <h3 id="in-progress-title" class="task-column-title">Fazendo</h3>
+      <article class="task-card" tabindex="0" aria-label="Tarefa de baixa prioridade em progresso">
+        <div class="task-info"><strong>Descrição:</strong> Descrição da tarefa de Baixa Prioridade</div>
+        <div class="task-info"><strong>Setor:</strong> Setor F</div>
+        <div class="task-info"><strong>Prioridade:</strong> Baixa</div>
+        <div class="task-info"><strong>Vinculado a:</strong> Usuário C</div>
+        <div class="task-actions">
+          <button type="button" class="action-btn edit" aria-label="Editar tarefa"><span class="material-icons" aria-hidden="true">edit</span>Editar</button>
+          <button type="button" class="action-btn delete" aria-label="Excluir tarefa"><span class="material-icons" aria-hidden="true">delete</span>Excluir</button>
+        </div>
+        <form aria-label="Alterar status da tarefa">
+          <fieldset class="status-radio-group">
+            <legend class="sr-only">Status da tarefa</legend>
+            <label><input type="radio" name="status2" value="a-fazer"> A fazer</label>
+            <label><input type="radio" name="status2" value="fazendo" checked> Fazendo</label>
+            <label><input type="radio" name="status2" value="pronto"> Pronto</label>
+          </fieldset>
+          <button type="submit" class="change-status-btn">Alterar Status</button>
+        </form>
+      </article>
+    </section>
+    
+    <section aria-labelledby="done-title" class="task-column" >
+      <h3 id="done-title" class="task-column-title">Pronto</h3>
+      <article class="task-card" tabindex="0" aria-label="Tarefa concluída">
+        <div class="task-info"><strong>Descrição:</strong> Descrição da tarefa concluída</div>
+        <div class="task-info"><strong>Setor:</strong> Setor H</div>
+        <div class="task-info"><strong>Prioridade:</strong> Média</div>
+        <div class="task-info"><strong>Vinculado a:</strong> Usuário D</div>
+        <div class="task-actions">
+          <button type="button" class="action-btn edit" aria-label="Editar tarefa"><span class="material-icons" aria-hidden="true">edit</span>Editar</button>
+          <button type="button" class="action-btn delete" aria-label="Excluir tarefa"><span class="material-icons" aria-hidden="true">delete</span>Excluir</button>
+        </div>
+        <form aria-label="Alterar status da tarefa">
+          <fieldset class="status-radio-group">
+            <legend class="sr-only">Status da tarefa</legend>
+            <label><input type="radio" name="status3" value="a-fazer"> A fazer</label>
+            <label><input type="radio" name="status3" value="fazendo"> Fazendo</label>
+            <label><input type="radio" name="status3" value="pronto" checked> Pronto</label>
+          </fieldset>
+          <button type="submit" class="change-status-btn">Alterar Status</button>
+        </form>
+      </article>
+    </section>
+  </div>
+</main>
+</body>
+</html>
+
