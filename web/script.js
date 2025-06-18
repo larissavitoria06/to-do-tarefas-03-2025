@@ -11,13 +11,19 @@ document.getElementById('form-cadastro').addEventListener('submit', async functi
     });
 
     if (response.ok) {
-      alert('Usuário cadastrado!');
+      alert('Usuário cadastrado com sucesso!');
       this.reset();
     } else {
       alert('Erro ao cadastrar usuário');
     }
   } catch (err) {
     console.error(err);
-    alert('Erro de conexão');
+    alert('Erro ao conectar ao servidor');
   }
+});
+document.querySelectorAll('form').forEach(form => {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+ 
+  });
 });
