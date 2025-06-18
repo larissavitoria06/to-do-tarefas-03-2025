@@ -19,7 +19,6 @@ model Tarefa {
   descricao String @db.VarChar(100)
   setor String  @db.VarChar(50)
   prioridade String
-  dataCadastro DateTime @default(now())
   status Status
   usuarioId Int
   usuario Usuario @relation("UsuarioTarefas", fields: [usuarioId], references: [id])
