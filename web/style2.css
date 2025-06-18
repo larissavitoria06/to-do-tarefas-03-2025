@@ -1,10 +1,7 @@
 :root {
-  --c1: #FFFFFF;
-  --c2: #0056b3;
-  --c3: #000000;
-  --c4: #ffffff;
-  --c5: #ffffff; 
-  --t1: rgb(0, 0, 0);
+  --c1: #ffffff;  
+  --c2: #c5afdf;  
+  --c3: #000000;  
 }
 
 * {
@@ -27,34 +24,38 @@ html {
 }
 
 header {
-  position: inherit;
-  top: 0;
-  left: 0;
-  right: 0;
   background: var(--c2);
   padding: 2rem 9%;
   display: flex;
   justify-content: space-between;
-  z-index: 1000;
+  align-items: center;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 header .logo {
   font-size: 3rem;
-  color: var(--c1);
   font-weight: bolder;
+  color: var(--c1);
 }
 
 header .logo span {
   color: var(--c1);
 }
-
-header .navbar a {
+header .navbar a,
+nav.menu a {
   font-size: 2rem;
   padding: 0 1.5rem;
   color: var(--c1);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.25s ease;
 }
 
-header .navbar a:hover {
+header .navbar a:hover,
+nav.menu a:hover,
+nav.menu a:focus {
   color: var(--c3);
+  outline: none;
 }

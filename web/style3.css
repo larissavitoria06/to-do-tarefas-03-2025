@@ -1,6 +1,9 @@
-:root{
-    --c1: white;
+:root {
+  --c1: #ffffff;  
+  --c2: #c5afdf;  
+  --c3: #000000;  
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -14,26 +17,6 @@
 }
 
 html {
-  font-size: 60.5%;
-  scroll-behavior: smooth;
-  scroll-padding-top: 6rem;
-  overflow-x: hidden;
-}
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #f9fafb;
-    color: #111;
-    line-height: 1.5;
-  }
-
-  .container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 16px 48px 16px;
-  }
-
-html {
   font-size: 62.5%;
   scroll-behavior: smooth;
   scroll-padding-top: 6rem;
@@ -41,22 +24,19 @@ html {
 }
 
 header {
-  position: inherit;
-  top: 0;
-  left: 0;
-  right: 0;
   background: var(--c2);
   padding: 2rem 9%;
   display: flex;
   justify-content: space-between;
-  z-index: 1000;
+  align-items: center;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 header .logo {
   font-size: 3rem;
-  color: var(--c1);
   font-weight: bolder;
+  color: var(--c1);
 }
 
 header .logo span {
@@ -67,160 +47,147 @@ header .navbar a {
   font-size: 2rem;
   padding: 0 1.5rem;
   color: var(--c1);
+  transition: color 0.3s ease;
 }
 
 header .navbar a:hover {
   color: var(--c3);
 }
-  body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-    background: #f9fafb;
-    color: #111;
-    line-height: 1.5;
-  }
 
-  .container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 16px 48px 16px;
+
+nav.menu {
+  display: flex;
+  gap: 24px;
+}
+
+header .navbar a,
+nav.menu a {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: var(--c1);
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+header .navbar a:hover,
+nav.menu a:hover,
+nav.menu a:focus {
+  color: var(--c3);
+  outline: none;
+}
+
+main > h2 {
+  margin-top: 40px;
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.task-columns {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.task-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 16px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.task-info {
+  font-size: 0.875rem;
+}
+
+.task-info strong {
+  font-weight: 600;
+}
+
+.task-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+button.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.material-icons {
+  font-size: 18px;
+}
+
+.status-radio-group {
+  margin-top: 12px;
+  font-size: 0.875rem;
+  display: flex;
+  gap: 16px;
+}
+
+.status-radio-group label {
+  cursor: pointer;
+}
+
+.status-radio-group input[type="radio"] {
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+.change-status-btn {
+  margin-top: 12px;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  border: none;
+  background-color: var(--c2);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.change-status-btn:hover,
+.change-status-btn:focus {
+  background-color: var(--c3);
+  outline: none;
+}
+
+.task-column-title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 1023px) {
+  .task-columns {
+    grid-template-columns: 1fr;
   }
 
   header {
-    background-color: #3366ff; 
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 16px 32px;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px;
+    justify-content: center;
+    text-align: center;
   }
-  header h1 {
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin: 0;
-  }
+
   nav.menu {
-    display: flex;
-    gap: 24px;
-  }
-  nav.menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.875rem;
-    white-space: nowrap;
-    transition: color 0.25s ease;
-  }
-  nav.menu a:hover,
-  nav.menu a:focus {
-    color: #c1d1ff;
-    outline: none;
-  }
-
-  main > h2 {
-    margin-top: 40px;
-    margin-bottom: 24px;
-    font-weight: 700;
-    font-size: 1.25rem;
-  }
-
-  .task-columns {
-    display: grid;
-    gap: 24px;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .task-card {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    padding: 16px 24px 24px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .task-info {
-    font-size: 0.875rem;
-  }
-  .task-info strong {
-    font-weight: 600;
-  }
-
-  .task-actions {
-    display: flex;
-    gap: 12px;
-    margin-top: 6px;
-  }
-  button.action-btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    padding: 6px 12px;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-
-  
-  .material-icons {
-    font-size: 18px;
-  }
-
-  .status-radio-group {
-    margin-top: 12px;
-    font-size: 0.875rem;
-    display: flex;
     gap: 16px;
+    justify-content: center;
+    width: 100%;
   }
-  .status-radio-group label {
-    cursor: pointer;
-  }
-  .status-radio-group input[type="radio"] {
-    margin-right: 4px;
-    cursor: pointer;
-  }
-
-  .change-status-btn {
-    margin-top: 12px;
-    padding: 8px 16px;
-    font-weight: 600;
-    font-size: 0.875rem;
-    border-radius: 8px;
-    border: none;
-    background-color: #3366ff;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  .change-status-btn:hover, .change-status-btn:focus {
-    background-color: #274fc0;
-    outline: none;
-  }
-n titles */
-  .task-column-title {
-    font-weight: 700;
-    font-size: 1rem;
-    margin-bottom: 16px;
-  }
-
-  @media (max-width: 1023px) {
-    .task-columns {
-      grid-template-columns: 1fr;
-    }
-    header {
-      flex-wrap: wrap;
-      gap: 12px;
-      padding: 16px;
-      justify-content: center;
-      text-align: center;
-    }
-    nav.menu {
-      gap: 16px;
-      justify-content: center;
-      width: 100%;
-    }
-  }
+}
