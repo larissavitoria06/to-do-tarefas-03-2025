@@ -10,8 +10,15 @@ document.getElementById('form-cadastro').addEventListener('submit', async functi
       body: JSON.stringify({ nome, email })
     });
 
+    
+    const cadastroSalvo = JSON.parse(localStorage.getItem('cadastro')) || [];
+
+    cadastroSalvo.push(novocadastro);
+
+    localStorage.setItem('cadastro', JSON.stringify(cadastroSalvo));
+
     if (response.ok) {
-      alert('Usuário cadastrado com sucesso!');
+      alert(' cadastrado com sucesso!');
       this.reset();
     } else {
       alert('Erro ao cadastrar usuário');

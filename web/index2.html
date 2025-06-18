@@ -24,32 +24,31 @@
 <main>
   <div class="formulario-container">
     <form id="form-cadastro">
-      <label for="Descrição">Descrição</label><br>
-      <input type="text" id="Descrição" placeholder="Descrição do Usuário" required><br>
+      <label for="descricao">Descrição</label><br>
+      <input type="text" id="descricao" placeholder="Descrição da tarefa" required><br>
 
-      <label for="Setor">Setor</label><br>
-      <input type="Setor" id="Setor" placeholder="Setor do Usuário" required><br><br>
-                <label for="Usuario">Usuário</label>
-                <select id="Usuario" required>
-                     <option value="">luis</option>
-                    <option value="">clara</option>
-                    <option value="">cristina</option>
-                </select>
-                <br>
-                <br>
-                    <label for="propriedade">propriedade</label>
-                <select id="propriedade" required>
-                    <option value="">Baixa</option>
-                    <option value="">Alta</option>
-                </select>
-                <br>
-                <br>
-                
-      <button type="submit">Cadastrar</button>
-    </form>
-  </div>
-</main>
+      <label for="setor">Setor</label><br>
+      <input type="text" id="setor" placeholder="Setor responsável" required><br><br>
 
-<script src="./script.js"></script>
+      <label for="usuario">Usuário</label><br>
+      <select id="usuario" required>
+        <option value="luis">Luis</option>
+        <option value="clara">Clara</option>
+        <option value="cristina">Cristina</option>
+      </select><br><br>
+
+      <label for="propriedade">Prioridade</label><br>
+      <select id="propriedade" required>
+        <option value="baixa">Baixa</option>
+        <option value="alta">Alta</option>
+      </select><br><br>
+
+ <button type="button" onclick="window.location.href='./index3.html'">Cadastrar</button>
+        </form>
+    </div>
+</main>  
+
+
+<script src="./script2.js"></script>
 </body>
 </html>

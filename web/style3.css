@@ -1,6 +1,77 @@
-  * {
-    box-sizing: border-box;
+:root{
+    --c1: white;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html {
+  font-size: 60.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #f9fafb;
+    color: #111;
+    line-height: 1.5;
   }
+
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 16px 48px 16px;
+  }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  overflow-x: hidden;
+}
+
+header {
+  position: inherit;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--c2);
+  padding: 2rem 9%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  font-size: 3rem;
+  color: var(--c1);
+  font-weight: bolder;
+}
+
+header .logo span {
+  color: var(--c1);
+}
+
+header .navbar a {
+  font-size: 2rem;
+  padding: 0 1.5rem;
+  color: var(--c1);
+}
+
+header .navbar a:hover {
+  color: var(--c3);
+}
   body {
     margin: 0;
     font-family: 'Inter', sans-serif;
