@@ -1,10 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const router = require('./routes');
+const router = require('./src/router');
 
 const app = express();
 
-mongoose.connect('mongodb://localhost:27017/tarefaApp', { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect('mongodb://localhost:27017/tarefaApp')
     .then(() => console.log('Conectado ao banco de dados MongoDB'))
     .catch((erro) => console.log('Erro ao conectar ao banco de dados', erro));
 
