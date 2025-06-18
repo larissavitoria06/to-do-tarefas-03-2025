@@ -1,47 +1,23 @@
-const carros = [
-    { id: 1, nome: 'Fiat Uno', preco: 100 },
-    { id: 2, nome: 'Volkswagen Gol', preco: 120 },
-    { id: 3, nome: 'Chevrolet Onix', preco: 150 }
-];
+document.getElementById('form-cadastro').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const nome = document.getElementById('nome').value;
+  const email = document.getElementById('email').value;
 
-const form = document.getElementById('form-cadastro');
-const selectCarro = document.getElementById('carro');
+  try {
+    const response = await fetch('http://localhost:3000/usuarios', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nome, email })
+    });
 
-carros.forEach(carro => {
-    const option = document.createElement('option');
-    option.value = carro.id;
-    option.textContent = carro.nome;
-    selectCarro.appendChild(option);
-});
-
-form.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    const nome = document.getElementById('cliente').value;
-    const cpf = document.getElementById('cpf').value;
-    const dataLocacao = document.getElementById('data-locacao').value;
-    const dataDevolucao = document.getElementById('data-devolucao').value;
-    const carroId = parseInt(selectCarro.value);
-
-    if (!carroId) {
-        alert('Selecione um carro!');
-        return;
+    if (response.ok) {
+      alert('Usuário cadastrado!');
+      this.reset();
+    } else {
+      alert('Erro ao cadastrar usuário');
     }
-
-    const carroSelecionado = carros.find(carro => carro.id === carroId);
-
-    const locacao = {
-        nome,
-        cpf,
-        dataLocacao,
-        dataDevolucao,
-        carro: carroSelecionado
-    };
-
-    const locacoes = JSON.parse(localStorage.getItem('locacoes')) || [];
-    locacoes.push(locacao);
-    localStorage.setItem('locacoes', JSON.stringify(locacoes));
-
-    alert('Locação cadastrada com sucesso!');
-    form.reset();
+  } catch (err) {
+    console.error(err);
+    alert('Erro de conexão');
+  }
 });
